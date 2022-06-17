@@ -29,11 +29,12 @@ h4 {
 /* header*/
 
 header {
+  padding-top: 0.5em;
   width: 100%;
   position: fixed;
   z-index: 1;
   border-bottom: 1px solid seashell;
-  height: 69px;
+  height: auto;
   background-color: black;
   align-items: center;
 }
@@ -41,11 +42,10 @@ header {
 header img {
   height: 50px;
   padding-left: 10px;
-  cursor: pointer;
 }
 
 nav {
-  text-align: right;
+  text-align: center;
   flex-grow: 1;
 }
 
@@ -59,7 +59,7 @@ nav span {
 main {
   padding-top: 69px;
   opacity: 0.9;
-  width: 1200px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -69,6 +69,14 @@ main {
   height: 700px;
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-mission-background.jpg");
   padding-top: 70px;
+  background-size: 100% 100%;
+}
+
+@media screen and (max-width: 850px) {
+  #mission {
+    height: 400px;
+    background-size: contain;
+  }
 }
 
 #mission .content {
@@ -80,8 +88,8 @@ main {
 /* Tea Section */
 
 #featured {
-  height: 700px;
-  width: 1000px;
+  height: auto;
+  max-width: 1000px;
   margin: auto;
   padding-top: 70px;
 }
@@ -106,14 +114,16 @@ main {
 /* Location Section */
 
 #locations {
-  height: 500px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
   padding-top: 70px;
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-locations-background.jpg");
 }
 
 #locations .flex-container {
   margin: auto;
-  width: 1100px;
+  width: 100%;
 }
 
 .location {
